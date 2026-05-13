@@ -1,0 +1,14 @@
+{
+  "apphosting": {
+    "backendId": "veyra-website"
+  },
+  "auth": {
+    "providers": {
+      "emailPassword": true,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "Veyra",
+        "supportEmail": "vinyas.devarmane5@gmail.com"
+      }
+    }
+  }
+}

@@ -1,0 +1,239 @@
+.page {
+  padding-top: var(--nav-height);
+}
+
+.hero {
+  text-align: center;
+}
+
+/* Toggle */
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.toggleActive {
+  color: var(--text-primary);
+}
+
+.toggleSwitch {
+  width: 52px;
+  height: 28px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-pill);
+  position: relative;
+  padding: 3px;
+  transition: background var(--duration-normal);
+}
+
+.toggleKnob {
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: var(--accent-cyan);
+  border-radius: 50%;
+  transition: transform var(--duration-normal) var(--ease-out);
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.toggleKnob.toggleOn {
+  transform: translateX(24px);
+}
+
+.saveBadge {
+  background: var(--accent-cyan-dim);
+  color: var(--accent-cyan);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  margin-left: var(--space-1);
+}
+
+/* Plans Grid */
+.plans {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.planCard {
+  position: relative;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-6);
+  text-align: left;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.planCard:hover {
+  border-color: var(--border-glow);
+  transform: translateY(-4px);
+}
+
+.planCard.highlighted {
+  border-color: var(--accent-cyan);
+  box-shadow: var(--shadow-glow-mixed);
+  background: linear-gradient(180deg, rgba(0,212,255,0.05) 0%, var(--bg-secondary) 30%);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-gradient);
+  color: var(--bg-primary);
+  padding: 4px 16px;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.planName {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.planDesc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+  min-height: 40px;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin-bottom: var(--space-6);
+}
+
+.currency {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.amount {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+}
+
+.period {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-left: var(--space-1);
+}
+
+.planBtn {
+  width: 100%;
+  margin-bottom: var(--space-6);
+}
+
+.featureList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.featureItem.notIncluded {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+/* FAQ */
+.faq {
+  background: var(--bg-secondary);
+}
+
+.faqList {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.faqItem {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.faqQuestion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: left;
+  transition: background var(--duration-fast);
+}
+
+.faqQuestion:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+.faqQuestion svg {
+  flex-shrink: 0;
+  transition: transform var(--duration-normal) var(--ease-out);
+  color: var(--text-muted);
+}
+
+.faqQuestion svg.faqOpen {
+  transform: rotate(180deg);
+}
+
+.faqAnswer {
+  padding: 0 var(--space-6) var(--space-5);
+  overflow: hidden;
+}
+
+.faqAnswer p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .plans {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .plans {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}

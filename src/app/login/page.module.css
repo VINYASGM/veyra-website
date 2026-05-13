@@ -1,0 +1,140 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--nav-height) var(--space-4) var(--space-8);
+  position: relative;
+}
+
+.formCard {
+  width: 100%;
+  max-width: 440px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-10);
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.dividerRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.dividerRow::before,
+.dividerRow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-subtle);
+}
+
+.socialBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: all var(--duration-fast);
+}
+
+.socialBtn:hover {
+  border-color: var(--border-glow);
+  background: var(--bg-glass-hover);
+}
+
+.socialBtns {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.submitBtn {
+  width: 100%;
+}
+
+.footer {
+  text-align: center;
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.footer a {
+  color: var(--accent-cyan);
+  font-weight: 500;
+  transition: opacity var(--duration-fast);
+}
+
+.footer a:hover {
+  opacity: 0.8;
+}
+
+.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--error);
+}
+
+.phoneSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.phoneRow {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.phoneRow .input {
+  flex: 1;
+}
+
+.backBtn {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  text-align: center;
+  padding: var(--space-2);
+  transition: color var(--duration-fast);
+}
+
+.backBtn:hover {
+  color: var(--accent-cyan);
+}
